@@ -1,0 +1,344 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AFD7CFA423B4E5C10091632D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CFA323B4E5C10091632D /* AppDelegate.swift */; };
+		AFD7CFA623B4E5C20091632D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AFD7CFA523B4E5C20091632D /* Assets.xcassets */; };
+		AFD7CFA923B4E5C20091632D /* MainMenu.xib in Resources */ = {isa = PBXBuildFile; fileRef = AFD7CFA723B4E5C20091632D /* MainMenu.xib */; };
+		AFD7CFB723B4E6D40091632D /* HexNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CFB523B4E6D40091632D /* HexNode.swift */; };
+		AFD7CFB823B4E6D40091632D /* HexView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFD7CFB623B4E6D40091632D /* HexView.swift */; };
+		AFD7CFD923B4E92E0091632D /* libSwiftAlgorithms.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFD7CFD823B4E92E0091632D /* libSwiftAlgorithms.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		AFD7CFA023B4E5C10091632D /* HexPathfinder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HexPathfinder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AFD7CFA323B4E5C10091632D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AFD7CFA523B4E5C20091632D /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AFD7CFA823B4E5C20091632D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/MainMenu.xib; sourceTree = "<group>"; };
+		AFD7CFAA23B4E5C20091632D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AFD7CFAB23B4E5C20091632D /* HexPathfinder.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HexPathfinder.entitlements; sourceTree = "<group>"; };
+		AFD7CFB523B4E6D40091632D /* HexNode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexNode.swift; sourceTree = "<group>"; };
+		AFD7CFB623B4E6D40091632D /* HexView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HexView.swift; sourceTree = "<group>"; };
+		AFD7CFD823B4E92E0091632D /* libSwiftAlgorithms.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; path = libSwiftAlgorithms.a; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AFD7CF9D23B4E5C10091632D /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD7CFD923B4E92E0091632D /* libSwiftAlgorithms.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AFD7CF9723B4E5C10091632D = {
+			isa = PBXGroup;
+			children = (
+				AFD7CFA223B4E5C10091632D /* HexPathfinder */,
+				AFD7CFA123B4E5C10091632D /* Products */,
+				AFD7CFD723B4E92E0091632D /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		AFD7CFA123B4E5C10091632D /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AFD7CFA023B4E5C10091632D /* HexPathfinder.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AFD7CFA223B4E5C10091632D /* HexPathfinder */ = {
+			isa = PBXGroup;
+			children = (
+				AFD7CFB523B4E6D40091632D /* HexNode.swift */,
+				AFD7CFB623B4E6D40091632D /* HexView.swift */,
+				AFD7CFA323B4E5C10091632D /* AppDelegate.swift */,
+				AFD7CFA523B4E5C20091632D /* Assets.xcassets */,
+				AFD7CFA723B4E5C20091632D /* MainMenu.xib */,
+				AFD7CFAA23B4E5C20091632D /* Info.plist */,
+				AFD7CFAB23B4E5C20091632D /* HexPathfinder.entitlements */,
+			);
+			path = HexPathfinder;
+			sourceTree = "<group>";
+		};
+		AFD7CFD723B4E92E0091632D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				AFD7CFD823B4E92E0091632D /* libSwiftAlgorithms.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AFD7CF9F23B4E5C10091632D /* HexPathfinder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AFD7CFAE23B4E5C20091632D /* Build configuration list for PBXNativeTarget "HexPathfinder" */;
+			buildPhases = (
+				AFD7CF9C23B4E5C10091632D /* Sources */,
+				AFD7CF9D23B4E5C10091632D /* Frameworks */,
+				AFD7CF9E23B4E5C10091632D /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HexPathfinder;
+			productName = HexPathfinder;
+			productReference = AFD7CFA023B4E5C10091632D /* HexPathfinder.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AFD7CF9823B4E5C10091632D /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1110;
+				LastUpgradeCheck = 1110;
+				ORGANIZATIONNAME = "Entenwolf Software";
+				TargetAttributes = {
+					AFD7CF9F23B4E5C10091632D = {
+						CreatedOnToolsVersion = 11.1;
+					};
+				};
+			};
+			buildConfigurationList = AFD7CF9B23B4E5C10091632D /* Build configuration list for PBXProject "HexPathfinder" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AFD7CF9723B4E5C10091632D;
+			productRefGroup = AFD7CFA123B4E5C10091632D /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AFD7CF9F23B4E5C10091632D /* HexPathfinder */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AFD7CF9E23B4E5C10091632D /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD7CFA623B4E5C20091632D /* Assets.xcassets in Resources */,
+				AFD7CFA923B4E5C20091632D /* MainMenu.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AFD7CF9C23B4E5C10091632D /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AFD7CFB823B4E6D40091632D /* HexView.swift in Sources */,
+				AFD7CFA423B4E5C10091632D /* AppDelegate.swift in Sources */,
+				AFD7CFB723B4E6D40091632D /* HexNode.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		AFD7CFA723B4E5C20091632D /* MainMenu.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				AFD7CFA823B4E5C20091632D /* Base */,
+			);
+			name = MainMenu.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		AFD7CFAC23B4E5C20091632D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AFD7CFAD23B4E5C20091632D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.15;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		AFD7CFAF23B4E5C20091632D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HexPathfinder/HexPathfinder.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HexPathfinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.entenwolf.HexPathfinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		AFD7CFB023B4E5C20091632D /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = HexPathfinder/HexPathfinder.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = HexPathfinder/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.entenwolf.HexPathfinder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AFD7CF9B23B4E5C10091632D /* Build configuration list for PBXProject "HexPathfinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD7CFAC23B4E5C20091632D /* Debug */,
+				AFD7CFAD23B4E5C20091632D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AFD7CFAE23B4E5C20091632D /* Build configuration list for PBXNativeTarget "HexPathfinder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AFD7CFAF23B4E5C20091632D /* Debug */,
+				AFD7CFB023B4E5C20091632D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = AFD7CF9823B4E5C10091632D /* Project object */;
+}
