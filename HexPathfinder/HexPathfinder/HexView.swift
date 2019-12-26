@@ -85,11 +85,8 @@ class HexView: NSView {
         
         let bp = NSBezierPath()
         bp.move(to: center(x: path[0].x, y: path[0].y))
-        
-        print("path:")
-        
+                
         for node in path {
-            print("(\(node.x), \(node.y))")
             bp.line(to: center(x: node.x, y: node.y))
         }
         
