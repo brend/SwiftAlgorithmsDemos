@@ -144,7 +144,7 @@ class HexView: NSView {
     
     override func mouseDown(with event: NSEvent) {
         let location = event.locationInWindow
-        let (x, y) = coordinates(of: location)
+        guard let (x, y) = coordinates(of: location) else { return }
         
         if event.modifierFlags.contains(.control) {
             origin = HexNode(x: x, y: y)
@@ -161,7 +161,7 @@ class HexView: NSView {
     
     override func mouseDragged(with event: NSEvent) {
         let point = event.locationInWindow
-        let (x, y) = coordinates(of: point)
+        guard let (x, y) = coordinates(of: point) else { return }
         
         if (x, y) != (dragHex ?? (-1, -1))
             && !coordsInvalid(x: x, y: y) {
@@ -172,18 +172,23 @@ class HexView: NSView {
         setNeedsDisplay(self.frame)
     }
     
-    func coordinates(of location: NSPoint) -> (Int, Int) {
+    func coordinates(of location: NSPoint) -> (Int, Int)? {
         for x in 0..<width {
             for y in 0..<height {
                 let center = self.center(x: x, y: y)
                 
                 if distance(location, center) < radius {
-                    return (x, y)
+                    if x >= 0 && x < width
+                        && y >= 0 && y < height {
+                        return (x, y)
+                    } else {
+                        return nil
+                    }
                 }
             }
         }
         
-        return (-1, -1)
+        return nil
     }
     
     func distance(_ p: NSPoint, _ q: NSPoint) -> CGFloat {

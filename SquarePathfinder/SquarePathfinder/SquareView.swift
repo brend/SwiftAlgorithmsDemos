@@ -112,9 +112,17 @@ class SquareView: NSView {
                 y: (CGFloat(node.y) + 0.5) * self.frame.size.height / CGFloat(height))
     }
     
-    func coordinates(of point: CGPoint) -> (Int, Int) {
-        (Int(point.x / self.frame.size.width * CGFloat(width)),
-         (Int(point.y / self.frame.size.height * CGFloat(height))))
+    func coordinates(of point: CGPoint) -> (Int, Int)? {
+        let (x, y) =
+            (Int(point.x / self.frame.size.width * CGFloat(width)),
+             (Int(point.y / self.frame.size.height * CGFloat(height))))
+        
+        if x >= 0 && x < width &&
+            y >= 0 && y < height {
+            return (x, y)
+        } else {
+            return nil
+        }
     }
     
     var dragNum = 0
@@ -122,7 +130,7 @@ class SquareView: NSView {
     
     override func mouseDown(with event: NSEvent) {
         let point = event.locationInWindow
-        let (x, y) = coordinates(of: point)
+        guard let (x, y) = coordinates(of: point) else { return }
         
         if event.modifierFlags.contains(.control) {
             origin = SquareNode(x: x, y: y)
@@ -139,7 +147,7 @@ class SquareView: NSView {
     
     override func mouseDragged(with event: NSEvent) {
         let point = event.locationInWindow
-        let (x, y) = coordinates(of: point)
+        guard let (x, y) = coordinates(of: point) else { return }
         
         if (x, y) != (dragSquare ?? (-1, -1)) {
             squares[x + y * width] = dragNum
