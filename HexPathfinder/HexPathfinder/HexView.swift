@@ -9,8 +9,8 @@
 import Cocoa
 import SwiftAlgorithms
 
-let width = 8
-let height = 8
+let width = 16
+let height = 16
 var hexes: [Int] = Array(repeating: 0, count: width * height)
 let widthf = CGFloat(width)
 let heightf = CGFloat(height)
@@ -24,15 +24,15 @@ func coordsInvalid(x: Int, y: Int) -> Bool {
 
 class HexView: NSView {
         
-    let radius = CGFloat(30)
+    let radius = CGFloat(15)
     
     let search = AStar<HexNode>()
     
     func center(x: Int, y: Int) -> CGPoint {
         let xcoord = CGFloat(x) * 1.5 * radius
         let ycoord = x.isMultiple(of: 2)
-            ? CGFloat(y) * 1.75 * radius
-            : CGFloat(y) * 1.75 * radius + 1 * radius
+            ? CGFloat(y) * 2 * radius
+            : CGFloat(y) * 2 * radius + 1.0 * radius
         let gridOffset = self.gridOffset
         let center = CGPoint(x: radius + xcoord + gridOffset.width,
                              y: radius + ycoord + gridOffset.height)
@@ -96,17 +96,30 @@ class HexView: NSView {
     func drawHex(center: CGPoint, radius: CGFloat, fillColor: NSColor, strokeColor: NSColor) {
         let path = NSBezierPath()
         
-        for i in 0...6 {
-            let angle = CGFloat(i) * 2 * CGFloat.pi / 6
-            let x = cos(angle) * radius + center.x
-            let y = -sin(angle) * radius + center.y
-            
-            if i == 0 {
-                path.move(to: NSPoint(x: x, y: y))
-            } else {
-                path.line(to: NSPoint(x: x, y: y))
-            }
-        }
+        /*
+         new PointF(x, y),
+         new PointF(x + width * 0.25f, y - height / 2),
+         new PointF(x + width * 0.75f, y - height / 2),
+         new PointF(x + width, y),
+         new PointF(x + width * 0.75f, y + height / 2),
+         new PointF(x + width * 0.25f, y + height / 2),
+         */
+        
+        
+        
+        let x = center.x - radius
+        let y = center.y
+        let r_2 = radius * 0.66
+        let width = 2 * radius
+        let height = 2 * radius
+        
+        path.move(to: .init(x: x, y: y))
+        path.line(to: .init(x: x + width * 0.25, y: y - height / 2))
+        path.line(to: .init(x: x + width * 0.75, y: y - height / 2))
+        path.line(to: .init(x: x + width, y: y))
+        path.line(to: .init(x: x + width * 0.75, y: y + height / 2))
+        path.line(to: .init(x: x + width * 0.25, y: y + height / 2))
+        path.close()
         
         fillColor.setFill()
         path.fill()
@@ -118,9 +131,11 @@ class HexView: NSView {
     func drawIndicator(_ center: CGPoint, _ radius: CGFloat, _ color: NSColor) {
         color.setFill()
         
+        let r = 2 * radius * 0.6
+        
         NSBezierPath(ovalIn:
-            NSRect(origin: CGPoint(x: center.x - radius * 0.3/2, y: center.y - radius * 0.3/2),
-                   size: .init(width: radius * 0.3, height: radius * 0.3)))
+            NSRect(origin: CGPoint(x: center.x - r/2, y: center.y - r/2),
+                   size: .init(width: r, height: r)))
         .fill()
     }
     
