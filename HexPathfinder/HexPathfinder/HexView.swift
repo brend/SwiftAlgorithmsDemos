@@ -95,18 +95,6 @@ class HexView: NSView {
     
     func drawHex(center: CGPoint, radius: CGFloat, fillColor: NSColor, strokeColor: NSColor) {
         let path = NSBezierPath()
-        
-        /*
-         new PointF(x, y),
-         new PointF(x + width * 0.25f, y - height / 2),
-         new PointF(x + width * 0.75f, y - height / 2),
-         new PointF(x + width, y),
-         new PointF(x + width * 0.75f, y + height / 2),
-         new PointF(x + width * 0.25f, y + height / 2),
-         */
-        
-        
-        
         let x = center.x - radius
         let y = center.y
         let r_2 = radius * 0.66
