@@ -14,3 +14,8 @@ Searches for a path between two points on a hexagonal grid using the A* algorith
 Command-click and Control-click to change the position of the points; click without modifiers to create/remove barriers.
 
 ![HexPathfinder finds a path on a hexagonal grid](Screenshots/HexPathfinder01.png)
+
+## TreeDrawer
+Computes a minimum spanning tree for a given graph, and animates a transformation between the graph and the tree.
+
+![TreeDrawer presents the solution of the Wikipedia sample of a minimum spanning tree](Screenshots/MST01.gif)
