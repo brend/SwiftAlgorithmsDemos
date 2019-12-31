@@ -10,4 +10,7 @@
    <FileRef
       location = "group:SquarePathfinder/SquarePathfinder.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:TreeDrawer/TreeDrawer.xcodeproj">
+   </FileRef>
 </Workspace>
