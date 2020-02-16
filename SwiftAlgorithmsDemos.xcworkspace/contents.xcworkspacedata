@@ -13,4 +13,7 @@
    <FileRef
       location = "group:TreeDrawer/TreeDrawer.xcodeproj">
    </FileRef>
+   <FileRef
+      location = "group:SlidePuzzle/SlidePuzzle.xcodeproj">
+   </FileRef>
 </Workspace>
