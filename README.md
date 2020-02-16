@@ -1,6 +1,11 @@
 # SwiftAlgorithmsDemos
 Demos of the algorithms published in SwiftAlgorithms
 
+## SlidePuzzle
+An interactive app that allows the user to scramble an 8-puzzle and have an A*-based algorithm solve it.
+
+![Scrambling a puzzle, then solving it](Screenshots/SlidePuzzle01.gif)
+
 ## SquarePathfinder
 Searches for a path between two points on a square grid using the A* algorithm provided by [SwiftAlgorithms](https://github.com/brend/SwiftAlgorithms).
 
