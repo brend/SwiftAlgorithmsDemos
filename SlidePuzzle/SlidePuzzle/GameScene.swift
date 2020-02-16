@@ -37,7 +37,7 @@ class GameScene: SKScene {
         }
         
         blank = childNode(withName: "Blank") as? SKSpriteNode
-        
+        blank.isHidden = true
         tiles.append(blank)
         
         swapCountLabel = childNode(withName: "swapCountLabel") as? SKLabelNode
